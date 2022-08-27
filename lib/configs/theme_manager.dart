@@ -11,8 +11,8 @@ class ThemeNotifier with ChangeNotifier {
 
   final lightTheme = AppTheme.light();
 
-  late ThemeData _themeData;
-  ThemeData getTheme() => _themeData;
+  ThemeData? _themeData;
+  ThemeData? getTheme() => _themeData;
 
   ThemeNotifier() {
     StorageManager.readData('themeMode').then((value) {

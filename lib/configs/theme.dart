@@ -1,11 +1,12 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
+import 'package:icab/configs/constants.dart';
 
 abstract class AppColors {
   static const secondary = Color(0xFF3277D8);
   static const accent = Color(0xFF323643);
   static const textDark = Color(0xFF323643);
-  static const textLigth = Color(0xFFF5F5F5);
+  static const textLight = Color(0xFFF5F5F5);
   static const textFaded = Color(0xFF606470);
   static const iconLight = Color(0xFFB1B4C0);
   static const iconDark = Color(0xFFB1B3C1);
@@ -39,6 +40,22 @@ abstract class AppTheme {
         textTheme: GoogleFonts.poppinsTextTheme().apply(
           bodyColor: AppColors.textDark,
         ),
+        elevatedButtonTheme: ElevatedButtonThemeData(
+          style: ElevatedButton.styleFrom(
+            padding: const EdgeInsets.symmetric(vertical: defaultPadding),
+            onPrimary: AppColors.textLight,
+            shape: RoundedRectangleBorder(
+              borderRadius: BorderRadius.circular(8),
+            ),
+          ),
+        ),
+        textButtonTheme: TextButtonThemeData(
+          style: TextButton.styleFrom(
+            shape: RoundedRectangleBorder(
+              borderRadius: BorderRadius.circular(25),
+            ),
+          ),
+        ),
         backgroundColor: _LightColors.background,
         progressIndicatorTheme: const ProgressIndicatorThemeData(
           color: AppColors.progressIndicatorLight,
@@ -46,7 +63,7 @@ abstract class AppTheme {
         scaffoldBackgroundColor: _LightColors.background,
         cardColor: _LightColors.card,
         appBarTheme: const AppBarTheme(
-          backgroundColor: Colors.transparent,
+          backgroundColor: _LightColors.background,
           foregroundColor: AppColors.textDark,
           elevation: 0,
         ),
@@ -65,7 +82,23 @@ abstract class AppTheme {
         brightness: Brightness.dark,
         visualDensity: visualDensity,
         textTheme: GoogleFonts.poppinsTextTheme().apply(
-          bodyColor: AppColors.textLigth,
+          bodyColor: AppColors.textLight,
+        ),
+        elevatedButtonTheme: ElevatedButtonThemeData(
+          style: ElevatedButton.styleFrom(
+            padding: const EdgeInsets.symmetric(vertical: defaultPadding),
+            onPrimary: AppColors.textLight,
+            shape: RoundedRectangleBorder(
+              borderRadius: BorderRadius.circular(8),
+            ),
+          ),
+        ),
+        textButtonTheme: TextButtonThemeData(
+          style: TextButton.styleFrom(
+            shape: RoundedRectangleBorder(
+              borderRadius: BorderRadius.circular(25),
+            ),
+          ),
         ),
         backgroundColor: _DarkColors.background,
         progressIndicatorTheme: const ProgressIndicatorThemeData(
@@ -74,12 +107,12 @@ abstract class AppTheme {
         scaffoldBackgroundColor: _DarkColors.background,
         cardColor: _DarkColors.card,
         appBarTheme: const AppBarTheme(
-          backgroundColor: Colors.transparent,
-          foregroundColor: AppColors.textLigth,
+          backgroundColor: _DarkColors.background,
+          foregroundColor: AppColors.textLight,
           elevation: 0,
         ),
         primaryTextTheme: const TextTheme(
-          headline6: TextStyle(color: AppColors.textLigth),
+          headline6: TextStyle(color: AppColors.textLight),
         ),
         iconTheme: const IconThemeData(color: AppColors.iconLight),
         colorScheme: const ColorScheme.dark().copyWith(
