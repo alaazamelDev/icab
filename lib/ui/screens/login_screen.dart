@@ -3,6 +3,7 @@ import 'package:flutter/material.dart';
 import 'package:icab/configs/constants.dart';
 import 'package:icab/configs/theme.dart';
 import 'package:icab/configs/theme_manager.dart';
+import 'package:icab/ui/screens/signup_screen.dart';
 import 'package:icab/ui/widgets/decorated_text_field.dart';
 import 'package:provider/provider.dart';
 
@@ -183,7 +184,9 @@ class _NewUserSection extends StatelessWidget {
           style: Theme.of(context).textTheme.titleSmall,
         ),
         TextButton(
-          onPressed: () {},
+          onPressed: () {
+            Navigator.pushReplacement(context, SignUpScreen.route());
+          },
           child: const Text('Sign up for a new account'),
         ),
       ],
