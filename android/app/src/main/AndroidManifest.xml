@@ -4,6 +4,8 @@
         android:label="icab"
         android:name="${applicationName}"
         android:icon="@mipmap/ic_launcher">
+       <meta-data android:name="com.google.android.geo.API_KEY"
+           android:value="AIzaSyCfEpv4VWodecx1FGPs0Uex8Bqc7jG6pmw"/>
         <activity
             android:name=".MainActivity"
             android:exported="true"

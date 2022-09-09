@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:icab/configs/constants.dart';
 import 'package:icab/configs/theme.dart';
 import 'package:icab/configs/theme_manager.dart';
+import 'package:icab/ui/screens/home_screen.dart';
 import 'package:icab/ui/screens/login_screen.dart';
 import 'package:icab/ui/widgets/decorated_text_field.dart';
 import 'package:provider/provider.dart';
@@ -159,7 +160,9 @@ class _SignupForm extends StatelessWidget {
           SizedBox(
             width: double.infinity,
             child: ElevatedButton(
-              onPressed: () {},
+              onPressed: () {
+                Navigator.push(context, HomeScreen.route());
+              },
               child: Text(
                 'Sign Up',
                 style: Theme.of(context).textTheme.titleMedium!.copyWith(
